@@ -1,4 +1,4 @@
-# Brad Traversy - React Front To Back - 01 - GitHub Finder
+# Brad Traversy - React Front To Back - 02 - Contact Keeper
 
 ## Udemy - [Brad Traversy - React Front To Back](https://www.udemy.com/course/modern-react-front-to-back/)
 
