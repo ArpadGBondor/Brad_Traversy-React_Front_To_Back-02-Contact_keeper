@@ -22,7 +22,8 @@
 
 ## Environment variable:
 
--   `DB_CONNECT=mongodb://localhost:27017/TasksDB`
+-   `DB_CONNECT=mongodb://localhost:27017/ContactKeeperDB`
+-   `JWT_SECRET=SecretKeyForJsonWebTokens`
 
 ## Original Course Code:
 
