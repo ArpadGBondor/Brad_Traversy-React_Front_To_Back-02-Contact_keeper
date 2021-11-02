@@ -22,7 +22,7 @@
 
 ## Environment variable:
 
--   Not yet
+-   `DB_CONNECT=mongodb://localhost:27017/TasksDB`
 
 ## Original Course Code:
 
