@@ -15,7 +15,7 @@ router.post(
     [
         // name can't be empty
         check('name', 'Please include name.').not().isEmpty(),
-        // username must be an email
+        // email must be a valid email
         check('email', 'Please include a valid email.').isEmail(),
         // password must be at least 6 chars long
         check('password', 'Please enter a password with 6 or more characters.').isLength({ min: 6 }),
