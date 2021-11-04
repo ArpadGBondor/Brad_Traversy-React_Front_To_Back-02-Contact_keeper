@@ -22,8 +22,9 @@
 
 ## Environment variable:
 
--   `DB_CONNECT=mongodb://localhost:27017/ContactKeeperDB`
--   `JWT_SECRET=SecretKeyForJsonWebTokens`
+-   Create a file named `.env` and set these variables:
+    -   `DB_CONNECT=mongodb://localhost:27017/ContactKeeperDB`
+    -   `JWT_SECRET=SecretKeyForJsonWebTokens`
 
 ## Original Course Code:
 
