@@ -6,9 +6,13 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const ContactItem = ({ contact }) => {
     const { id, name, email, phone, type } = contact;
-    const { deleteContact } = useContactContext();
+    const { deleteContact, setCurrentContact, clearCurrentContact } = useContactContext();
 
-    const onDelete = () => deleteContact(id);
+    const onDelete = () => {
+        clearCurrentContact();
+        deleteContact(id);
+    };
+    const onEdit = () => setCurrentContact(contact);
     return (
         <div className="card bg-light">
             <h3 className="text-primary text-left">
@@ -31,7 +35,9 @@ const ContactItem = ({ contact }) => {
                 )}
             </ul>
             <p>
-                <button className="btn btn-dark btn-sm">Edit</button>
+                <button className="btn btn-dark btn-sm" onClick={onEdit}>
+                    Edit
+                </button>
                 <button className="btn btn-danger btn-sm" onClick={onDelete}>
                     Delete
                 </button>
