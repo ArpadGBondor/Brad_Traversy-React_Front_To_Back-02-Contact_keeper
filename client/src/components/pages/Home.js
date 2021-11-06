@@ -1,5 +1,4 @@
 import React, { useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
 
 import Contacts from '../contacts/Contacts';
 import ContactForm from '../contacts/ContactForm';
@@ -8,15 +7,11 @@ import { useAuthtContext } from '../../context/auth/authContext';
 
 const Home = () => {
     const { loadUser, isAuthenticated } = useAuthtContext();
-    const navigate = useNavigate();
 
     useEffect(() => {
         loadUser();
-        if (!isAuthenticated) {
-            navigate('/login');
-        }
         // eslint-disable-next-line
-    }, []);
+    }, [isAuthenticated]);
     return (
         <div className="grid-2">
             <div>

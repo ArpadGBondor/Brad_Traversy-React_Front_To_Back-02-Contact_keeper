@@ -1,5 +1,6 @@
 import React, { Fragment } from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import AuthCheck from './routing/AuthCheck';
 
 import Navbar from './layout/Navbar';
 import Alerts from './layout/Alerts';
@@ -24,7 +25,7 @@ const App = () => {
                             <div className="container">
                                 <Alerts />
                                 <Routes>
-                                    <Route path="/" element={<Home />} />
+                                    <Route path="/" element={<AuthCheck redirect="/login" element={<Home />} />} />
                                     <Route path="/about" element={<About />} />
                                     <Route path="/login" element={<Login />} />
                                     <Route path="/register" element={<Register />} />
