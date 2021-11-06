@@ -1,5 +1,4 @@
 import React, { useReducer } from 'react';
-import { v4 as uuidv4 } from 'uuid'; // use uuidv4()
 import { AuthContext } from './authContext';
 import authReducer from './authReducer';
 import {

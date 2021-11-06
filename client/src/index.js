@@ -3,9 +3,9 @@ import ReactDOM from 'react-dom';
 import App from './components/App';
 
 import { library } from '@fortawesome/fontawesome-svg-core';
-import { faPhone, faEnvelopeOpen, faIdCardAlt } from '@fortawesome/free-solid-svg-icons';
+import { faPhone, faEnvelopeOpen, faIdCardAlt, faInfoCircle } from '@fortawesome/free-solid-svg-icons';
 
-library.add(faPhone, faEnvelopeOpen, faIdCardAlt);
+library.add(faPhone, faEnvelopeOpen, faIdCardAlt, faInfoCircle);
 
 ReactDOM.render(
     <React.StrictMode>
