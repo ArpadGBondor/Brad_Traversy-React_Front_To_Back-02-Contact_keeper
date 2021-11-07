@@ -12,15 +12,15 @@ const Register = (props) => {
         password2: '',
     });
     const { registerUser, error, clearErrors, isAuthenticated } = useAuthtContext();
-    const { setAlert } = useAlertContext();
+    const { setAlerts } = useAlertContext();
     const { name, email, password, password2 } = user;
 
     useEffect(() => {
         if (isAuthenticated) {
             navigate('/');
         }
-        if (error === 'User already exists.') {
-            setAlert(error, 'danger');
+        if (error) {
+            setAlerts(error, 'danger');
             clearErrors();
         }
         // eslint-disable-next-line
@@ -30,9 +30,9 @@ const Register = (props) => {
     const onSubmit = (e) => {
         e.preventDefault();
         if (name === '' || email === '' || password === '') {
-            setAlert('Please enter all fields.', 'danger');
+            setAlerts('Please enter all fields.', 'danger');
         } else if (password !== password2) {
-            setAlert('Passwords do not match.', 'danger');
+            setAlerts('Passwords do not match.', 'danger');
         } else {
             registerUser({
                 name,

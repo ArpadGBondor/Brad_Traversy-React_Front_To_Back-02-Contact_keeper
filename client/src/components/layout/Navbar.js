@@ -3,11 +3,14 @@ import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useAuthtContext } from '../../context/auth/authContext';
+import { useContactContext } from '../../context/contact/contactContext';
 
 const Navbar = ({ title, icon }) => {
     const { isAuthenticated, logoutUser, user } = useAuthtContext();
+    const { clearContacts } = useContactContext();
 
     const onLogout = () => {
+        clearContacts();
         logoutUser();
     };
     const authLinks = (

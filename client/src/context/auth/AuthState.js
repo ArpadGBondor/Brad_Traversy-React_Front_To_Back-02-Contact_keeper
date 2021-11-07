@@ -61,10 +61,14 @@ const AuthState = (props) => {
 
             loadUser();
         } catch (error) {
-            dispatch({
-                type: REGISTER_FAIL,
-                payload: error.response.data.msg,
-            });
+            if (!error.response) {
+                dispatch({ type: REGISTER_FAIL, payload: error.message });
+            } else if (!error.response.data.msg) {
+                // Validation Errors
+                dispatch({ type: REGISTER_FAIL, payload: error.response.data.errors.map((e) => e.msg) });
+            } else {
+                dispatch({ type: REGISTER_FAIL, payload: error.response.data.msg });
+            }
         }
     };
     // Login User
@@ -84,10 +88,14 @@ const AuthState = (props) => {
 
             loadUser();
         } catch (error) {
-            dispatch({
-                type: LOGIN_FAIL,
-                payload: error.response.data.msg,
-            });
+            if (!error.response) {
+                dispatch({ type: LOGIN_FAIL, payload: error.message });
+            } else if (!error.response.data.msg) {
+                // Validation Errors
+                dispatch({ type: LOGIN_FAIL, payload: error.response.data.errors.map((e) => e.msg) });
+            } else {
+                dispatch({ type: LOGIN_FAIL, payload: error.response.data.msg });
+            }
         }
     };
     // Logout User

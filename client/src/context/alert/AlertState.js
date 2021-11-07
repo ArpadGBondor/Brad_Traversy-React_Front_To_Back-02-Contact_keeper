@@ -27,11 +27,21 @@ const AlertState = (props) => {
         }, timeout);
     };
 
+    // Set Multiple Alerts
+    const setAlerts = (msg, type = 'light', timeout = 5000) => {
+        if (Array.isArray(msg)) {
+            msg.forEach((m) => setAlert(m, type, timeout));
+        } else {
+            setAlert(msg, type, timeout);
+        }
+    };
+
     return (
         <AlertContext.Provider
             value={{
                 alerts: state,
                 setAlert,
+                setAlerts,
             }}
         >
             {props.children}

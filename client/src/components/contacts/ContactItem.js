@@ -5,12 +5,12 @@ import { useContactContext } from '../../context/contact/contactContext';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const ContactItem = ({ contact }) => {
-    const { id, name, email, phone, type } = contact;
+    const { _id, name, email, phone, type } = contact;
     const { deleteContact, setCurrentContact, clearCurrentContact } = useContactContext();
 
     const onDelete = () => {
         clearCurrentContact();
-        deleteContact(id);
+        deleteContact(_id);
     };
     const onEdit = () => setCurrentContact(contact);
     return (

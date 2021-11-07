@@ -10,7 +10,7 @@ const Login = () => {
         password: '',
     });
     const { loginUser, isAuthenticated, error, clearErrors } = useAuthtContext();
-    const { setAlert } = useAlertContext();
+    const { setAlerts } = useAlertContext();
 
     const { email, password } = user;
 
@@ -18,8 +18,8 @@ const Login = () => {
         if (isAuthenticated) {
             navigate('/');
         }
-        if (error === 'Invalid credentials.') {
-            setAlert(error, 'danger');
+        if (error) {
+            setAlerts(error, 'danger');
             clearErrors();
         }
         // eslint-disable-next-line
@@ -29,7 +29,7 @@ const Login = () => {
     const onSubmit = (e) => {
         e.preventDefault();
         if (email === '' || password === '') {
-            setAlert('Please enter all fields.', 'danger');
+            setAlerts('Please enter all fields.', 'danger');
         } else {
             loginUser({
                 email,
