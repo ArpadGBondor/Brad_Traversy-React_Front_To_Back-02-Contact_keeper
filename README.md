@@ -10,7 +10,7 @@
 
 ## Deployed
 
--   [Not yet]()
+-   Deployed on [Heroku](https://gabriel-contact-keeper.herokuapp.com/)
 
 ## Used Tools:
 
