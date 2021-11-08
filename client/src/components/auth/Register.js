@@ -20,7 +20,11 @@ const Register = (props) => {
             navigate('/');
         }
         if (error) {
-            setAlerts(error, 'danger');
+            if (error === 'No token, authorization denied.') {
+                setAlerts('Please sign in or sign up.', 'lignt');
+            } else {
+                setAlerts(error, 'danger');
+            }
             clearErrors();
         }
         // eslint-disable-next-line
