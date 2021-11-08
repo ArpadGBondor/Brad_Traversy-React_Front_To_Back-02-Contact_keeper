@@ -14,11 +14,15 @@
 
 ## Used Tools:
 
--   HTML5
--   CSS3
--   JavaScript
--   React.js
--   MongoDB Atlas
+- Backend:
+    - Node.js
+    - Express.js
+    - Mongoose + MongoDB Atlas
+    - Authentication API
+    - CRUD API
+- Frontend:
+    - React.js
+    - Context API
 
 ## Environment variable:
 
