@@ -14,21 +14,21 @@
 
 ## Used Tools:
 
-- Backend:
-    - Node.js
-    - Express.js
-    - Mongoose + MongoDB Atlas
-    - Authentication API
-    - CRUD API
-- Frontend:
-    - React.js
-    - Context API
+-   Backend:
+    -   Node.js
+    -   Express.js
+    -   Mongoose + MongoDB Atlas
+    -   Authentication API
+    -   CRUD API
+-   Frontend:
+    -   React.js
+    -   Context API
 
 ## Mayor changes:
 
- - The project was created using the newest version (v6.0.0) of the `react-router-dom` package, so I had to improvise here and there. :)
- - I'm using `dotenv` package to hide my secrets, instead of the `config` package used by the tutorial.
- - I improved the error handling during the integration of the front- and the backend, because the tutorial didn't handle error messages from the backend's data validation.
+-   The project was created using the newest version (v6.0.0) of the `react-router-dom` package, so I had to improvise here and there. :)
+-   I'm using `dotenv` package to hide my secrets, instead of the `config` package used by the tutorial.
+-   I improved the error handling during the integration of the front- and the backend, because the tutorial didn't handle error messages from the backend's data validation.
 
 ## Environment variable:
 
@@ -36,6 +36,6 @@
     -   `DB_CONNECT=mongodb://localhost:27017/ContactKeeperDB`
     -   `JWT_SECRET=SecretKeyForJsonWebTokens`
 
-## Original Course Code:
+## The instructor's solution:
 
--   The original code for this project can be found in [this Github repo](https://github.com/bradtraversy/contact-keeper)
+-   The source code of the instructor's solution is in [this Github repo](https://github.com/bradtraversy/contact-keeper)
